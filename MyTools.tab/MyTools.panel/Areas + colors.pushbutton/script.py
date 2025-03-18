@@ -10,7 +10,7 @@ existing_schedules = DB.FilteredElementCollector(doc).OfClass(DB.ViewSchedule).T
 schedule_name = "Zone Area Schedule"
 for sched in existing_schedules:
     if sched.Name == schedule_name:
-        print(f"Schedule '{schedule_name}' already exists.")
+        print(f"Schedule {schedule_name} already exists.")
         t.RollBack()
         return
 
